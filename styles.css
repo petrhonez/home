@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    position: relative;
+    width: 800px; /* Largura do mapa */
+    height: 600px; /* Altura do mapa */
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#mascot {
+    position: absolute;
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: 50px;
+    left: 0;
+    top: 0;
+    transition: left 1s, top 1s; /* Animação de movimento */
+}
