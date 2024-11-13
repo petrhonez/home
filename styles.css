@@ -1,31 +1,34 @@
 body {
     margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
-}
-
-#game-container {
+    overflow: hidden;
     position: relative;
-    width: 800px; /* Largura do mapa */
-    height: 600px; /* Altura do mapa */
+    cursor: none;
 }
 
-#map {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-#mascot {
+#horizontal-line, #vertical-line {
     position: absolute;
-    width: 50px; /* Ajuste o tamanho conforme necessário */
-    height: 50px;
-    left: 0;
+    background-color: red;
+}
+
+#horizontal-line {
+    height: 2px;
+    width: 100%;
     top: 0;
-    transition: left 1s, top 1s; /* Animação de movimento */
+}
+
+#vertical-line {
+    width: 2px;
+    height: 100%;
+    left: 0;
+}
+
+#custom-cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: blue; /* Cor do cursor personalizado */
+    border-radius: 50%; /* Torna o cursor um círculo */
+    pointer-events: none; /* Permite que o cursor não interfira com outros elementos */
+    transform: translate(-50%, -50%); /* Centraliza o cursor no ponto do mouse */
 }
